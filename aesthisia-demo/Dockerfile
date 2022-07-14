@@ -1,4 +1,13 @@
-FROM node:16-slim
-ADD . /aesthisia-demo
+FROM node:17-alpine
+
 WORKDIR /aesthisia-demo
+
+COPY package.json .
+
 RUN npm install
+
+COPY . . 
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
