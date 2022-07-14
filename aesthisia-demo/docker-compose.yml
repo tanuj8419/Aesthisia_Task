@@ -1,9 +1,0 @@
-version: '3.8'
-services:
-  web:
-    build: .
-    command: npm start
-    volumes:
-      - .:/aesthisia-demo
-    ports:
-      - "3000:3000"
